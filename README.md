@@ -46,26 +46,32 @@ Este programa recupera e processa dados financeiros dos formulários 10-Q da SEC
     python sec_query_data.py
     ```
 
-3. O programa irá exibir os KPIs calculados para cada ação e mostrar gráficos desses indicadores. Os dados processados serão salvos como arquivos CSV no diretório atual.
 
-## Visão Geral do Código
+3. Aguarde enquanto o programa consulta dados da SEC e calcula os indicadores.
 
-- `main()`: A função principal que inicializa o processo para cada ação na lista `stocks_watch`. Recupera e processa dados, calcula indicadores financeiros, plota os resultados e salva os dados em arquivos CSV.
-  
-- `get_data_from_sec(ticker)`: Busca dados da API da SEC para um determinado ticker de ação.
+## Indicadores Calculados
 
-- `treat_data_from_10q(fillings_us_gaap)`: Processa os dados brutos da SEC e calcula os principais indicadores financeiros. Retorna um dicionário com os dados processados e os KPIs calculados.
+O programa calcula os seguintes indicadores financeiros:
 
-## Indicadores Financeiros Calculados
+- Current Ratio
+- Quick Ratio
+- Gross Margin
+- Operating Margin
+- Return on Assets (ROA)
+- Return on Equity (ROE)
+- Debt-to-Equity Ratio
+- Interest Coverage Ratio
+- Assets Turnover Ratio
+- Receivable Turnover Ratio
+- Cash-to-Net Income Ratio
+- Earnings Per Share (EPS)
+- Price-to-Earnings Ratio (P/E)
 
-- `current_ratio`: Ativos correntes divididos por passivos correntes.
-- `quick_ratio`: (Ativos correntes - Estoque) divididos por passivos correntes.
-- `GrossMargin`: (Receita - Custo dos Bens Vendidos) dividido por receita.
-- `OperatingMargin`: Rendimento operacional dividido por receita.
-- `roa`: Lucro líquido dividido por ativos correntes.
-- `roe`: Lucro líquido dividido pelo patrimônio líquido.
+## Saída
 
-## Contato
+Os dados são apresentados em DataFrames do pandas e gráficos gerados usando matplotlib.
 
-Para quaisquer perguntas ou sugestões, por favor entre em contato: eng.gabrielcoutinho@outlook.com.br
+---
+
+Este programa foi desenvolvido por [Seu Nome] como parte de um projeto de análise financeira. Para mais detalhes ou suporte, entre em contato em [seu email].
 

@@ -29,7 +29,8 @@ def main():
         # plt.grid(True)
         
         #save to .csv
-        #dic_stockswatch[stock]['df_data'].to_csv(stock, sep=';')
+        dic_stockswatch[stock]['df_data'].to_csv(stock + '-df_data.csv', sep=';')
+        dic_stockswatch[stock]['df_kpi'].to_csv(stock + '-df_kpi.csv', sep=';')
     
     plt.show()
 
