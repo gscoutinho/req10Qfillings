@@ -215,6 +215,7 @@ def treat_data_from_10q(fillings_us_gaap, ticker):
         df_10q_kpi['pe'] = df_10q_data['stock_price']/df_10q_kpi['eps']
     except:
         df_10q_kpi['pe'] = 0
+    df_10q_kpi['stock_price'] = df_10q_data['stock_price']
 
     return {'df_data': df_10q_data,
             'df_kpi': df_10q_kpi.dropna()
